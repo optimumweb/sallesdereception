@@ -19,39 +19,28 @@
         <script src="{{ $site->theme->asset('js/theme.js') }}" defer></script>
     </head>
     <body>
-        <header id="site-header" class="hero is-primary">
-            <div class="hero-body">
-                <div class="container">
-                    <div class="level">
-                        <div class="level-left">
-                            <div class="level-item">
-                                <div id="site-title">
-                                    <h1 id="site-name" class="title">
-                                        <a href="{{ $site->home() }}">
-                                            {{ $site->name }}
-                                        </a>
-                                    </h1>
-
-                                    <h2 id="site-description">
-                                        {{ $site->description }}
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="level-right">
-                            <div class="level-item">
-                                {!! $site->menu('primary') !!}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="columns">
+            <div class="column is-2">
+                <header id="site-header">
+                    <h1 id="site-logo">
+                        <a href="{{ $site->home() }}">
+                            <img
+                                src="{{ $site->theme->asset('img/logo.png') }}"
+                                width="3201"
+                                height="1767"
+                                alt="{{ $site->name }} - {{ $site->description }}"
+                            />
+                        </a>
+                    </h1>
+                </header>
             </div>
-        </header>
 
-        <main id="site-content">
-            @yield('content')
-        </main>
+            <div class="column is-10">
+                <main id="site-content">
+                    @yield('content')
+                </main>
+            </div>
+        </div>
 
         <footer id="site-footer" class="footer">
             <div class="content has-text-centered">
