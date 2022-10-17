@@ -1,9 +1,7 @@
-@extends('layouts.default')
+@extends('layouts.default', [
+    'title' => $entry->title,
+])
 
 @section('content')
-    <section class="section">
-        <div class="container">
-            @include('partials.page')
-        </div>
-    </section>
+    {!! $entry->content !!}
 @endsection

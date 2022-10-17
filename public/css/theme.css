@@ -2643,7 +2643,7 @@ a.tag:hover {
 }
 
 .title {
-  color: hsl(202deg, 40%, 4%);
+  color: hsl(246deg, 62%, 17%);
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125;
@@ -2678,7 +2678,7 @@ a.tag:hover {
 }
 
 .subtitle {
-  color: hsl(202deg, 40%, 4%);
+  color: hsl(246deg, 62%, 17%);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
@@ -10388,5 +10388,5 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 30rem 0 20rem 0;
+  padding: 24rem 0 16rem 0;
 }
