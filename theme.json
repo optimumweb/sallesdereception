@@ -1,0 +1,16 @@
+{
+  "name": "limestonesoftware/sallesdereception",
+  "menuLocations": [
+    {
+      "name": "primary",
+      "title": "Primary Menu"
+    },
+    {
+      "name": "footer",
+      "title": "Footer Menu"
+    }
+  ],
+  "config": {
+    "fontawesome": "54c8dbf8b5"
+  }
+}
