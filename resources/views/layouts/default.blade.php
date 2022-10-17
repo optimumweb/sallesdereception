@@ -19,28 +19,28 @@
         <script src="{{ $site->theme->asset('js/theme.js') }}" defer></script>
     </head>
     <body>
-        <div class="columns">
-            <div class="column is-2">
-                <header id="site-header">
-                    <h1 id="site-logo">
-                        <a href="{{ $site->home() }}">
-                            <img
-                                src="{{ $site->theme->asset('img/logo.png') }}"
-                                width="3201"
-                                height="1767"
-                                alt="{{ $site->name }} - {{ $site->description }}"
-                            />
-                        </a>
-                    </h1>
-                </header>
+        <header id="site-header">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <h1 id="site-logo">
+                            <a href="{{ $site->home() }}">
+                                <img
+                                    src="{{ $site->theme->asset('img/logo.png') }}"
+                                    width="3201"
+                                    height="1767"
+                                    alt="{{ $site->name }} - {{ $site->description }}"
+                                />
+                            </a>
+                        </h1>
+                    </div>
+                </div>
             </div>
+        </header>
 
-            <div class="column is-10">
-                <main id="site-content">
-                    @yield('content')
-                </main>
-            </div>
-        </div>
+        <main id="site-content">
+            @yield('content')
+        </main>
 
         <footer id="site-footer" class="footer">
             <div class="content has-text-centered">
