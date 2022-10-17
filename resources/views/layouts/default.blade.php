@@ -8,7 +8,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ $site->theme->asset('css/theme.css') }}">
 
@@ -22,7 +22,7 @@
         <header id="site-header">
             <div class="container">
                 <div class="columns">
-                    <div class="column">
+                    <div class="column is-3">
                         <h1 id="site-logo">
                             <a href="{{ $site->home() }}">
                                 <img
