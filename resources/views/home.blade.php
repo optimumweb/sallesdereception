@@ -1,15 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-    <section class="section">
-        <div class="container">
-            @if ($posts = $site->entries('post')->paginate(5))
-                @foreach($posts as $entry)
-                    @include('partials.post')
-                @endforeach
-
-                {{ $posts->appends(request()->input())->links('partials.pagination') }}
-            @endif
-        </div>
-    </section>
+    <h1 class="title is-1">
+        Lorem Ipsum
+    </h1>
 @endsection
