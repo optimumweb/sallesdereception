@@ -10413,9 +10413,6 @@ p {
 
 .slideshow {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .slideshow .prev, .slideshow .next {
   cursor: pointer;
