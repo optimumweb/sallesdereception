@@ -6,9 +6,9 @@
 
         <title>{{ isset($title) ? "{$title} | {$site->name}" : "{$site->name}" }}</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        @if ($typekit = $site->theme->config('typekit'))
+            <link rel="stylesheet" href="https://use.typekit.net/{{ $typekit }}.css">
+        @endif
 
         <link rel="stylesheet" href="{{ $site->theme->asset('css/theme.css') }}">
 
