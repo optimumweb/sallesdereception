@@ -16,23 +16,45 @@
             <script src="https://kit.fontawesome.com/{{ $fontawesome }}.js" crossorigin="anonymous"></script>
         @endif
 
+        <script src="{{ $site->theme->asset('js/jquery/jquery.min.js') }}" defer></script>
         <script src="{{ $site->theme->asset('js/theme.js') }}" defer></script>
     </head>
     <body>
         <header id="site-header">
             <div class="container">
-                <div class="columns">
-                    <div class="column is-3">
-                        <h1 id="site-logo">
-                            <a href="{{ $site->home() }}">
-                                <img
-                                    src="{{ $site->theme->asset('img/logo.png') }}"
-                                    width="3201"
-                                    height="1767"
-                                    alt="{{ $site->name }} - {{ $site->description }}"
-                                />
-                            </a>
-                        </h1>
+                <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <h1 id="site-logo">
+                                <a href="{{ $site->home() }}">
+                                    <img
+                                        src="{{ $site->theme->asset('img/logo.png') }}"
+                                        width="300"
+                                        height="120"
+                                        alt="{{ $site->name }} - {{ $site->description }}"
+                                    />
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="level-right">
+                        <div class="level-item">
+                            {!! $site->menu('primary') !!}
+                        </div>
+
+                        @if (false && $skeddaUrl = $site->theme->config('skedda_url'))
+                            <div class="level-item">
+                                <a
+                                    class="button is-primary"
+                                    href="{{ $skeddaUrl }}"
+                                    target="_blank"
+                                >
+                                    <span>{{ $site->trans('base.reserve') }}</span>
+                                    <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span>
+                                </a>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -43,8 +65,24 @@
         </main>
 
         <footer id="site-footer" class="footer">
-            <div class="content has-text-centered">
-                <p id="copy">&copy; {{ $site->name }} {{ now()->format('Y') }}</p>
+            <div class="container">
+                <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <p id="copy">&copy; {{ $site->name }} {{ now()->format('Y') }}</p>
+                        </div>
+                    </div>
+
+                    <div class="level-right">
+                        <div class="level-item">
+                            <p id="by">
+                                <a href="https://limestone.dev" target="_blank">
+                                    {{ $site->trans('base.devBy') }}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
     </body>

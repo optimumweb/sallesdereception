@@ -13,5 +13,6 @@ const mix = require('laravel-mix');
 
 mix
     .setPublicPath('public')
+    .copy('node_modules/jquery/dist/', 'public/js/jquery')
     .js('resources/js/theme.js', 'public/js')
     .sass('resources/sass/theme.sass', 'public/css');

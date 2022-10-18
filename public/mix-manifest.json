@@ -1,4 +1,7 @@
 {
     "/js/theme.js": "/js/theme.js",
-    "/css/theme.css": "/css/theme.css"
+    "/css/theme.css": "/css/theme.css",
+    "/js/jquery/jquery.js": "/js/jquery/jquery.js",
+    "/js/jquery/jquery.min.js": "/js/jquery/jquery.min.js",
+    "/js/jquery/jquery.min.map": "/js/jquery/jquery.min.map"
 }
