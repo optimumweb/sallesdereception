@@ -34,6 +34,7 @@
                                     @if ($logo = $site->theme()->setting('logo'))
                                         <img
                                             src="{{ $logo }}"
+                                            width="300"
                                             alt="{{ $site->name }} - {{ $site->description }}"
                                         />
                                     @endif
