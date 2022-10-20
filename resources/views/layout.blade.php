@@ -7,7 +7,7 @@
         <title>{{ isset($title) ? "{$title} | {$site->name}" : "{$site->name}" }}</title>
 
         @if ($favicon = $site->theme()->setting('favicon'))
-            <link rel="icon" type="image/png" href="{{ $favicon }}" />
+            <link rel="icon" href="{{ $favicon }}" />
         @endif
 
         @if ($typekit = $site->theme()->config('typekit'))
