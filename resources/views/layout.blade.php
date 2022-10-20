@@ -6,7 +6,7 @@
 
         <title>{{ isset($title) ? "{$title} | {$site->name}" : "{$site->name}" }}</title>
 
-        @if ($favicon = $site->theme()->config('favicon'))
+        @if ($favicon = $site->theme()->setting('favicon'))
             <link rel="icon" type="image/png" href="{{ $favicon }}" />
         @endif
 
@@ -31,7 +31,7 @@
                         <div class="level-item">
                             <h1 id="site-logo">
                                 <a href="{{ $site->home() }}">
-                                    @if ($logo = $site->theme()->config('logo'))
+                                    @if ($logo = $site->theme()->setting('logo'))
                                         <img
                                             src="{{ $logo }}"
                                             alt="{{ $site->name }} - {{ $site->description }}"
