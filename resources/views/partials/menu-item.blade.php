@@ -11,7 +11,7 @@
     @if ($item->children->count() > 0)
         <ul>
             @foreach($item->children as $child)
-                @include('menu.item', ['item' => $child, 'depth' => $depth + 1])
+                @include('partials.menu-item', ['item' => $child, 'depth' => $depth + 1])
             @endforeach
         </ul>
     @endif

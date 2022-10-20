@@ -42,19 +42,6 @@
                         <div class="level-item">
                             {!! $site->menu('primary') !!}
                         </div>
-
-                        @if (false && $skeddaUrl = $site->theme->config('skedda_url'))
-                            <div class="level-item">
-                                <a
-                                    class="button is-primary"
-                                    href="{{ $skeddaUrl }}"
-                                    target="_blank"
-                                >
-                                    <span>{{ $site->trans('base.reserve') }}</span>
-                                    <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span>
-                                </a>
-                            </div>
-                        @endif
                     </div>
                 </div>
             </div>
@@ -66,20 +53,22 @@
 
         <footer id="site-footer" class="footer">
             <div class="container">
-                <div class="level">
-                    <div class="level-left">
-                        <div class="level-item">
-                            <p id="copy">&copy; {{ $site->name }} {{ now()->format('Y') }}</p>
-                        </div>
+                <div class="columns">
+                    <div class="column is-6">
+                        {!! $site->menu('footer') !!}
                     </div>
 
-                    <div class="level-right">
-                        <div class="level-item">
-                            <p id="by">
-                                <a href="https://limestone.dev" target="_blank">
-                                    {{ $site->trans('base.devBy') }}
-                                </a>
-                            </p>
+                    <div class="column is-6">
+                        <div id="footer-copy">
+                            <a href="{{ $site->home() }}">
+                                &copy; {{ $site->name }} {{ now()->format('Y') }}
+                            </a>
+
+                            &bull;
+
+                            <a href="https://limestone.dev" target="_blank">
+                                {{ $site->trans('base.forgedBy') }}
+                            </a>
                         </div>
                     </div>
                 </div>

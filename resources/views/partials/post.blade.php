@@ -22,7 +22,7 @@
         </span>
 
         <span
-            class="entry-author"
+            class="entry-author"æ
             itemprop="author"
         >
             {{ $entry->author }}

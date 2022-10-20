@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'devBy' => "Site développé par Limestone",
+    'devBy' => "Forgé par Limestone",
 ];
