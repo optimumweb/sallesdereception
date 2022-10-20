@@ -10,6 +10,20 @@
       "title": "Footer Menu"
     }
   ],
+  "settings": [
+    {
+      "name": "logo",
+      "title": "Logo",
+      "help": "Upload your site's logo file",
+      "type": "file"
+    },
+    {
+      "name": "favicon",
+      "title": "Favicon",
+      "help": "Upload your site's favicon file",
+      "type": "file"
+    }
+  ],
   "config": {
     "fontawesome": "54c8dbf8b5",
     "typekit": "ygr7ohl"

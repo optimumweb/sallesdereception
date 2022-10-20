@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ $site->locale->name }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>{{ isset($title) ? "{$title} | {$site->name}" : "{$site->name}" }}</title>
 
-        @if ($typekit = $site->theme->config('typekit'))
-            <link rel="stylesheet" href="https://use.typekit.net/{{ $typekit }}.css">
+        @if ($favicon = $site->theme()->config('favicon'))
+            <link rel="icon" type="image/png" href="{{ $favicon }}" />
         @endif
 
-        <link rel="stylesheet" href="{{ $site->theme->asset('css/theme.css') }}">
+        @if ($typekit = $site->theme()->config('typekit'))
+            <link rel="stylesheet" href="https://use.typekit.net/{{ $typekit }}.css" />
+        @endif
 
-        @if ($fontawesome = $site->theme->config('fontawesome'))
+        <link rel="stylesheet" href="{{ $site->theme()->asset('css/theme.css') }}" />
+
+        @if ($fontawesome = $site->theme()->config('fontawesome'))
             <script src="https://kit.fontawesome.com/{{ $fontawesome }}.js" crossorigin="anonymous"></script>
         @endif
 
-        <script src="{{ $site->theme->asset('js/jquery/jquery.min.js') }}" defer></script>
-        <script src="{{ $site->theme->asset('js/theme.js') }}" defer></script>
+        <script src="{{ $site->theme()->asset('js/jquery/jquery.min.js') }}" defer></script>
+        <script src="{{ $site->theme()->asset('js/theme.js') }}" defer></script>
     </head>
     <body>
         <header id="site-header">
@@ -27,12 +31,12 @@
                         <div class="level-item">
                             <h1 id="site-logo">
                                 <a href="{{ $site->home() }}">
-                                    <img
-                                        src="{{ $site->theme->asset('img/logo.png') }}"
-                                        width="300"
-                                        height="120"
-                                        alt="{{ $site->name }} - {{ $site->description }}"
-                                    />
+                                    @if ($logo = $site->theme()->config('logo'))
+                                        <img
+                                            src="{{ $logo }}"
+                                            alt="{{ $site->name }} - {{ $site->description }}"
+                                        />
+                                    @endif
                                 </a>
                             </h1>
                         </div>
