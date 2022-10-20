@@ -1,6 +1,6 @@
 <nav
     id="menu-{{ $menu->location }}"
-    class="menu"
+    class="site-menu"
     role="navigation"
 >
     <ul>
