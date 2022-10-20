@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'devBy' => "Forged by Limestone",
+    'forgedBy' => "Forged by Limestone",
 ];
