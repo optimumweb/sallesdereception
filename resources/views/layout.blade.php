@@ -7,7 +7,7 @@
         <title>{{ isset($title) ? "{$title} | {$site->name}" : "{$site->name}" }}</title>
 
         @if ($favicon = $site->theme()->setting('favicon'))
-            <link rel="icon" href="{{ $favicon }}" />
+            <link rel="icon" href="{{ storageUrl($favicon) }}" />
         @endif
 
         @if ($typekit = $site->theme()->config('typekit'))
@@ -33,7 +33,7 @@
                                 <a href="{{ $site->home() }}">
                                     @if ($logo = $site->theme()->setting('logo'))
                                         <img
-                                            src="{{ $logo }}"
+                                            src="{{ storageUrl($logo) }}"
                                             width="300"
                                             alt="{{ $site->name }} - {{ $site->description }}"
                                         />
